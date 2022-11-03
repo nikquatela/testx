@@ -1,0 +1,385 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2022-08-01 09:07+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ../views/templates/concorso_ricercatore_view.pt:270
+msgid "Approvazione atti"
+msgstr ""
+
+#: ../content/concorso.py:88
+msgid "Area"
+msgstr ""
+
+#: ../content/concorso.py:89
+msgid "Area da cui &#232; bandito il concorso"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:291
+msgid "Assunzione"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:31
+msgid "Bando"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:301
+msgid "Candidati Assunti"
+msgstr ""
+
+#: ../content/concorso.py:73
+msgid "Categoria"
+msgstr ""
+
+#: ../content/concorso_ricercatore.py:152
+msgid "Comitato di vigilanza"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:199
+msgid "Comitato di vigilanza:"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:167
+msgid "Commissione"
+msgstr ""
+
+#: ../profiles/default/types/Concorso.xml
+msgid "Concorso"
+msgstr ""
+
+#: ../profiles/default/types/ConcorsoAssRicerca.xml
+msgid "Concorso Assegno di Ricerca"
+msgstr ""
+
+#: ../profiles/default/types/ConcorsoRicercatore.xml
+msgid "Concorso Ricercatore/Associato"
+msgstr ""
+
+#: ../content/concorso_ricercatore.py:97
+msgid "Criteri di valutazione"
+msgstr ""
+
+#: ../content/concorso.py:170
+msgid "Data I prova"
+msgstr ""
+
+#: ../content/concorso.py:174
+msgid "Data II prova"
+msgstr ""
+
+#: ../content/concorso.py:178
+msgid "Data III prova"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:70
+msgid "Data del Consiglio di Amministrazione"
+msgstr ""
+
+#: ../content/concorso_ricercatore.py:171
+#: ../views/templates/concorso_ricercatore_view.pt:231
+msgid "Data discussione pubblica"
+msgstr ""
+
+#: ../views/templates/report_view.pt:75
+msgid "Decreto di Pubblicazione Atti n."
+msgstr ""
+
+#: ../views/templates/report_view.pt:61
+msgid "Decreto n."
+msgstr ""
+
+#: ../content/concorso.py:52
+#: ../content/concorso_ricercatore.py:55
+msgid "Descrive il tipo di contratto"
+msgstr ""
+
+#: ../content/concorso.py:234
+#: ../content/concorso_ricercatore.py:225
+msgid "Elenco delle prove del concorso"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:239
+msgid "Espletamento prove:"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:54
+msgid "Gazzetta Ufficiale"
+msgstr ""
+
+#: ../profiles/default/types/Concorso.xml
+msgid "Gestione concorsi UniBa"
+msgstr ""
+
+#: ../configure.zcml:27
+msgid "Installs the csi.concorsi add-on."
+msgstr ""
+
+#: ../content/concorso.py:74
+msgid "La categoria per il quale si concorre"
+msgstr ""
+
+#: ../views/templates/report_view.pt:98
+msgid "La ricerca non ha prodotto risultati."
+msgstr ""
+
+#: ../content/concorso.py:59
+#: ../content/concorso_ricercatore.py:73
+msgid "La struttura dove verra impiegato il vincitore"
+msgstr ""
+
+#: ../profiles/default/types/Nota.xml
+msgid "Nota"
+msgstr ""
+
+#: ../profiles/default/types/Nota.xml
+msgid "Nota concorso"
+msgstr ""
+
+#: ../content/concorso.py:233
+#: ../content/concorso_ricercatore.py:224
+#: ../views/templates/concorso_ricercatore_view.pt:215
+msgid "Prove"
+msgstr ""
+
+#: ../content/concorso.py:51
+#: ../content/concorso_ricercatore.py:54
+msgid "Rapporto di lavoro"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:47
+msgid "Scadenza"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:221
+msgid "Selezione per titoli"
+msgstr ""
+
+#: ../content/concorso_ricercatore.py:87
+msgid "Settore Concorsuale"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:122
+msgid "Settore concorsuale:"
+msgstr ""
+
+#: ../content/concorso_ricercatore.py:92
+msgid "Settore scientifico disciplinare"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:126
+msgid "Settore scientifico disciplinare:"
+msgstr ""
+
+#: ../tests/test_vocab_lista_prove.py:29
+msgid "Sony Aplha 7R III"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:296
+msgid "Spesa concorsuale"
+msgstr ""
+
+#: ../content/concorso.py:58
+#: ../content/concorso_ass_ricerca.py:26
+#: ../content/concorso_ricercatore.py:72
+msgid "Struttura di assegnazione"
+msgstr ""
+
+#: ../configure.zcml:36
+msgid "Uninstalls the csi.concorsi add-on."
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:286
+msgid "Vincitore"
+msgstr ""
+
+#: ../content/concorso_ricercatore.py:98
+msgid "allegare i criteri di valutazione"
+msgstr ""
+
+#. Default: "Altro"
+#: ../content/concorso.py:217
+#: ../content/concorso_ricercatore.py:208
+msgid "altro"
+msgstr ""
+
+#. Default: "Approvazione atti"
+#: ../content/concorso.py:195
+#: ../content/concorso_ass_ricerca.py:73
+#: ../content/concorso_ricercatore.py:186
+msgid "approvazione_atti"
+msgstr ""
+
+#. Default: "Albo pretorio online"
+#: ../views/templates/concorso_ricercatore_view.pt:60
+msgid "box_bando_albo"
+msgstr ""
+
+#. Default: "Affisso all'Albo Ufficiale del giorno"
+#: ../views/templates/concorso_ricercatore_view.pt:93
+msgid "box_bando_albo_giorno"
+msgstr ""
+
+#. Default: "BANDO:"
+#: ../views/templates/concorso_ricercatore_view.pt:131
+msgid "box_bando_allegato"
+msgstr ""
+
+#. Default: "CRITERI DI VALUTAZIONE:"
+#: ../views/templates/concorso_ricercatore_view.pt:151
+msgid "box_bando_criteri"
+msgstr ""
+
+#. Default: "del giorno"
+#: ../views/templates/concorso_ricercatore_view.pt:41
+#: ../views/templates/report_view.pt:63
+msgid "box_bando_del_giorno"
+msgstr ""
+
+#. Default: "DOMANDA DI PARTECIPAZIONE:"
+#: ../views/templates/concorso_ricercatore_view.pt:140
+msgid "box_bando_domanda"
+msgstr ""
+
+#. Default: "Bando D.R. n."
+#: ../views/templates/concorso_ricercatore_view.pt:40
+msgid "box_bando_dr_n"
+msgstr ""
+
+#. Default: "Pubblicato sulla Gazzetta Ufficiale"
+#: ../views/templates/concorso_ricercatore_view.pt:85
+#: ../views/templates/report_view.pt:67
+msgid "box_bando_gu"
+msgstr ""
+
+#. Default: "Modificato con Bando"
+#: ../views/templates/concorso_ricercatore_view.pt:77
+msgid "box_bando_mod_bando"
+msgstr ""
+
+#. Default: "(di cui riservati <span>${DYNAMIC_CONTENT}</span>)"
+#: ../views/templates/concorso_ricercatore_view.pt:106
+msgid "box_bando_posti_riservati"
+msgstr ""
+
+#. Default: "(scaduto)"
+#: ../views/templates/concorso_ricercatore_view.pt:51
+msgid "box_bando_scaduto"
+msgstr ""
+
+#. Default: "Nomina della commissione"
+#: ../views/templates/concorso_ricercatore_view.pt:176
+msgid "box_commissione_nomina"
+msgstr ""
+
+#. Default: "Commissione non ancora nominata"
+#: ../views/templates/concorso_ricercatore_view.pt:204
+msgid "box_commissione_non_nominata"
+msgstr ""
+
+#. Default: "il diario di esame, o un ulteriore rinvio, sara' pubblicato nella G.U. del giorno"
+#: ../views/templates/concorso_ricercatore_view.pt:241
+msgid "box_prove_diario"
+msgstr ""
+
+#. Default: "Storico dei rinvii delle date di espletamento"
+#: ../views/templates/concorso_ricercatore_view.pt:250
+msgid "box_prove_storico"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:118
+msgid "candidati:"
+msgstr ""
+
+#. Default: "Commissione"
+#: ../content/concorso.py:141
+#: ../content/concorso_ass_ricerca.py:63
+#: ../content/concorso_ricercatore.py:157
+msgid "commissione"
+msgstr ""
+
+#: ../configure.zcml:27
+msgid "csi.concorsi"
+msgstr ""
+
+#: ../configure.zcml:36
+msgid "csi.concorsi (uninstall)"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:247
+msgid "da definire"
+msgstr ""
+
+#. Default: "Date concorso"
+#: ../content/concorso.py:183
+#: ../content/concorso_ricercatore.py:176
+msgid "date_concorso"
+msgstr ""
+
+#. Default: "Dati bando"
+#: ../content/concorso.py:104
+#: ../content/concorso_ass_ricerca.py:41
+#: ../content/concorso_ricercatore.py:103
+msgid "dati_bando"
+msgstr ""
+
+#. Default: "Dati bando - riapertura"
+#: ../content/concorso.py:120
+#: ../content/concorso_ass_ricerca.py:51
+#: ../content/concorso_ricercatore.py:120
+msgid "dati_bando_riapertura"
+msgstr ""
+
+#: ../profiles/default/types/ConcorsoAssRicerca.xml
+msgid "gestione assegno di ricerca"
+msgstr ""
+
+#: ../profiles/default/types/ConcorsoRicercatore.xml
+msgid "gestione concorso ricercatore/associato"
+msgstr ""
+
+#. Default: "Note"
+#: ../content/concorso.py:210
+#: ../content/concorso_ass_ricerca.py:80
+#: ../content/concorso_ricercatore.py:201
+msgid "note"
+msgstr ""
+
+#: ../content/concorso.py:45
+#: ../content/concorso_ass_ricerca.py:35
+#: ../content/concorso_ricercatore.py:48
+msgid "numero bando / anno di pubblicazione"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:104
+msgid "posti:"
+msgstr ""
+
+#. Default: "Prove"
+#: ../content/concorso.py:132
+#: ../content/concorso_ricercatore.py:132
+msgid "prove"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:114
+msgid "rapporto di lavoro:"
+msgstr ""
+
+#: ../views/templates/concorso_ricercatore_view.pt:110
+msgid "struttura:"
+msgstr ""
+
+#. Default: "Content listing"
+#: ../views/templates/report_view.pt:21
+msgid "summary_content_listing"
+msgstr ""

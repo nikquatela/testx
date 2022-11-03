@@ -1,0 +1,57 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="csi.concorsi">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="csi.concorsi.interfaces.ICsiConcorsiLayer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="csi.concorsi"
+      type="plone"
+      directory="static"
+      />
+
+  <browser:resource
+      name="ico-pdf.png"
+      file="resources/ico-pdf.png" />
+
+  <browser:resource
+      name="ico-bando.png"
+      file="resources/ico-bando.png" />
+
+  <browser:resource
+      name="ico-commissione.png"
+      file="resources/ico-commissione.png" />
+
+  <browser:resource
+      name="ico-prove.png"
+      file="resources/ico-prove.png" />
+
+  <browser:resource
+      name="ico-approvazione.png"
+      file="resources/ico-approvazione.png" />
+
+  <browser:resource
+      name="ico-partecipa.png"
+      file="resources/ico-partecipa.png" />
+
+  <browser:resource
+      name="ico-concorso-d.png"
+      file="resources/ico-concorso-d.png" />
+
+  <browser:resource
+      name="ico-concorso-a.png"
+      file="resources/ico-concorso-a.png" />
+
+  <browser:resource
+      name="ico-concorso.png"
+      file="resources/ico-concorso.png" />
+
+</configure>

@@ -1,0 +1,290 @@
+.contenuti-concorsi-card{
+    margin: 30px 15px !important;
+    @media screen and (max-width: 990px){
+        margin: 25px -10px !important;
+    }
+}
+
+.contenuti-concorsi-card-home{
+    margin: 25px 5px !important;
+    @media screen and (max-width: 990px){
+        margin: 25px 0px !important;
+    }
+}
+
+.contenuti-concorsi-card, .contenuti-concorsi-card-home{
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px 0px gray;
+
+    /* contenuti-concorsi-card-body-pica */
+    .tileTitle, .contenuti-concorsi-card-head{
+        background-color: #016BBD;
+        border-radius: 10px 10px 0 0;
+        color:white;
+        padding: 10px;
+        .ico-box-concorso, h4 {
+            display: inline;
+        }
+        .title-box-concorso{
+            margin-top: 7px;
+            padding-left: 10px;
+        }
+
+        @media screen and (max-width: 999px){
+            .ico-box-concorso{
+                display: none !important;
+            }
+            .ico-box-concorso:before {
+                content: none !important;
+            }
+            .title-box-concorso{
+                margin-top: 0px;
+                padding-left: 0px;
+            }
+            .title-box-concorso:before{
+                display: inline-block;
+                content:"";
+                margin-right: 5px;
+            }
+            .title-bando:before {
+                background-image: url("/reclutamento/++resource++ico-bando.png");
+                width: 25px; 
+                height: 28px;
+            }
+            .title-commissione:before {
+                background-image: url("/reclutamento/++resource++ico-commissione.png");
+                width: 29px; 
+                height: 26px;
+            }
+            .title-prove:before {
+                background-image: url("/reclutamento/++resource++ico-prove.png");
+                width: 29px; 
+                height: 25px;
+            }
+            .title-approvazione:before {
+                background-image: url("/reclutamento/++resource++ico-approvazione.png");
+                width: 26px; 
+                height: 25px;
+
+            }
+            .title-partecipa:before {
+                background-image: url("/reclutamento/++resource++ico-partecipa.png");
+                width: 30px; 
+                height: 29px;
+            }
+        }
+        @media screen and (min-width: 1000px){
+            .ico-box-concorso:before{
+                display: inline-block;
+                content:"";
+                margin-right: 5px;
+            }
+            .ico-bando:before {
+                background-image: url("/reclutamento/++resource++ico-bando.png");
+                width: 25px; 
+                height: 28px;
+            }
+            .ico-commissione:before {
+                background-image: url("/reclutamento/++resource++ico-commissione.png");
+                width: 29px; 
+                height: 26px;
+            }
+            .ico-prove:before {
+                background-image: url("/reclutamento/++resource++ico-prove.png");
+                width: 29px; 
+                height: 25px;
+                margin-top: 3px;
+            }
+            .ico-approvazione:before {
+                background-image: url("/reclutamento/++resource++ico-approvazione.png");
+                width: 26px; 
+                height: 25px;
+                margin-top: 4px;
+            }
+            .ico-partecipa:before {
+                background-image: url("/reclutamento/++resource++ico-partecipa.png");
+                width: 30px; 
+                height: 29px;
+            }
+            .title-box-concorso:before {
+                content: none !important;
+            }
+        }
+    }
+
+    .tileTitle{
+        font-size: 18px;
+        a{
+            color: white;
+            text-decoration: underline;
+        }
+    }
+    .tileBody, .contenuti-concorsi-card-body{
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+        padding: 10px;
+        @media screen and (max-width: 767px){
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+    .tileBody{
+        padding: 10px;
+    }
+    .col-md-1{
+        width: 6%;
+    }
+
+}
+
+
+
+
+
+/* stessa classe usata anche nella vista report_concorsi */
+.card-concorsi-bando-allegato{
+    background-color: #F0F0F0;
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: -2px;
+}
+.card-concorsi-bando-allegato:before {
+    background-image: url("/reclutamento/++resource++ico-pdf.png");
+    display: inline-block;
+    width: 25px; 
+    height: 24px;
+    content:""; 
+    margin-right: 4px;
+    vertical-align: -24%;
+}
+
+
+
+
+.simple-card-concorsi{
+    @media screen and (max-width: 990px){
+        padding: 0px !important;
+        margin: -10px !important;
+    }
+}
+
+.simple-card-concorsi-default {
+    border: 1px solid transparent;
+    border-color: #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    margin: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    .simple-card-concorsi-heading {
+        background-color: #f5f5f5;
+        padding: 10px 15px;
+        @media screen and (max-width: 990px){
+            padding: 7px;
+        }
+        .simple-card-concorsi-title{
+            font-weight: bold;
+        }
+    }
+    .simple-card-concorsi-body{
+        /* background-color: #ffffe3; */
+        padding: 15px;
+        @media screen and (max-width: 990px){
+            padding: 7px;
+        }
+        .detail-row{
+            margin: 0px;
+            .detail-label {
+                padding: 1em;
+                color: #1c2024;
+                background: #FFFFFF;
+                font-weight: 700;
+                text-align: right;
+                vertical-align: middle;
+                margin-bottom: 0px;
+                border: 0px;
+                @media screen and (max-width: 767px){
+                  padding: 0em;
+                  text-align: left;
+                }
+            }
+            .detail-value {
+                padding: 1em;
+                margin-bottom: 0px;
+                border: 0px;
+                border-left: 1px solid #1c2024;
+                @media screen and (max-width: 767px){
+                  padding: 0em;
+                  border: 0px !important;
+                  margin-bottom: 1em;
+                }
+            }
+        }
+    }
+}
+
+.inizioriga-discreet:before{
+    content: "\00BB";  
+}
+
+.report-concorsi{
+    @media screen and (max-width: 991px){
+        br{
+            display: none;
+        }
+        a {
+            margin-right: 10px !important;
+        }
+    }
+    .report-concorsi-body{
+        cursor: pointer;
+    }
+}
+.report-concorsi:hover{
+    background-color: #eee;
+}
+
+
+
+body#visual-portal-wrapper {
+
+    &.pat-plone #edit-zone {
+        .contenttype-concorso:after {
+            content: url("/reclutamento/++resource++ico-concorso.png") !important;
+        }
+        .contenttype-concorso:before {
+            content: none !important;
+        }
+        .contenttype-concorsoassricerca:after {
+            content: url("/reclutamento/++resource++ico-concorso-a.png") !important;
+        }
+        .contenttype-concorsoassricerca:before {
+            content: none !important;
+        }
+        .contenttype-concorsoricercatore:after {
+            content: url("/reclutamento/++resource++ico-concorso-d.png") !important;
+        }
+        .contenttype-concorsoricercatore:before {
+            content: none !important;
+        }
+        .contenttype-nota:after {
+            content: '\e80e' !important;
+        }
+        .contenttype-nota:before {
+            content: none;
+        } 
+    }
+    .contenttype-concorso:before {
+        content: url("/reclutamento/++resource++ico-concorso.png") !important;
+    }
+    .contenttype-concorsoassricerca:before {
+        content: url("/reclutamento/++resource++ico-concorso-a.png") !important;
+    }
+    .contenttype-concorsoricercatore:before {
+        content: url("/reclutamento/++resource++ico-concorso-d.png") !important;
+    }
+    .contenttype-nota:before {
+        content: '\e80e';
+    }
+}

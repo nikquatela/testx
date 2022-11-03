@@ -1,0 +1,78 @@
+<div metal:define-macro="box_note_macro">
+
+    <metal:listingmacro define-macro="listing">
+        <tal:results define="batch view/batch; note_concorso context/note;">
+          <tal:listing condition="python: batch or note_concorso">
+            <div class="row">
+              <div class="col-12 col-md-12 col-sm-12 simple-card-concorsi">
+                <h3 style="border-top: 1px solid #c1c1c1" 
+                  i18n:translate="box_note_title">Note addizionali</h3>
+                
+                <div tal:condition="note_concorso"
+                      class="simple-card-concorsi-default">
+                  <div class="simple-card-concorsi-heading">
+                    <div class="simple-card-concorsi-title"
+                        i18n:translate="box_note_subtitle">Note e commenti</div>	
+                  </div>
+                  <div class="simple-card-concorsi-body">
+                    <!-- <div class="row detail-row">
+                      <div class="col-sm-3 detail-label">Ufficio</div>
+                      <div class="col-sm-9 detail-value">U.O. Affari generali, Personale, Formazione e Contenzioso</div>
+                    </div> -->
+                    <div class="row detail-row">
+                      <span tal:content="structure context/note/output">note</span>
+                    </div>
+                  </div>
+                </div>
+
+                <tal:entries tal:repeat="item batch">
+                  <tal:block tal:define="item_url item/getURL;
+                                        item_id item/getId;
+                                        item_title item/Title;
+                                        item_title_or_id python:item_title or item_id;
+                                        item_description item/Description;
+                                        item_wf_state item/review_state;
+                                        itemObj item/getObject;
+                                        content_nota itemObj/contenuto_nota/output;">
+                    <div class="simple-card-concorsi-default">
+                      <div class="simple-card-concorsi-heading">
+                        <div class="simple-card-concorsi-title">
+                          <a  tal:omit-tag="isAnon" 
+                            tal:attributes="href item_url;">
+                            <span tal:content="item/Title"/> 
+                          </a>
+                        </div>
+                        <div class="documentByLine discreet">
+                          <i class="far fa-calendar-alt"></i>
+                          <tal:dates define="modified itemObj/ModificationDate;
+                                            toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
+                            <span class="documentModified"
+                                  tal:condition="modified">
+                              <span i18n:translate="box_last_modified">
+                                 last modified
+                              </span>
+                              <span tal:content="python:toLocalizedTime(modified, long_format=False)">
+                                Modified
+                              </span>
+                            </span>
+                          </tal:dates>
+                          <span tal:condition="python:item_wf_state=='private'"
+                              style="font-style: italic;color: red;"> - ${item_wf_state}</span> 
+                        </div>
+                      </div>	
+                      <div class="simple-card-concorsi-body">
+                        <div class="row detail-row">
+                          <span tal:content="structure content_nota">note</span>
+                        </div>
+                      </div>
+                    </div>
+                  </tal:block>
+                </tal:entries>
+
+              </div>  
+            </div>
+          </tal:listing>
+        </tal:results>
+      </metal:listingmacro>
+
+</div>

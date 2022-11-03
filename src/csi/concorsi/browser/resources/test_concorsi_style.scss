@@ -1,0 +1,69 @@
+.filtroTipo {
+    fieldset{
+        h5 {
+            @media screen and (min-width: 768px) {
+                display: none !important;
+            }
+            @media screen and (max-width: 767px) {
+                display: block !important;
+            }
+        }
+    }
+    .autotoc-nav {
+        a {
+            border-bottom: 1px solid #DDD;
+        }
+        @media screen and (min-width: 768px) {
+            display: block !important;
+        }
+        @media screen and (max-width: 767px) {
+            display: none !important;
+        }
+    }
+} 
+
+
+
+.contenuti-concorsi{
+    padding: 10px; 
+    padding-left: 0px;
+    .contenuti-concorsi-head{
+        background-color: aliceblue;
+        border-bottom: 1px solid #DDD;
+        border-radius: 10px 10px 0 0;
+        margin: -10px;
+        .collapsed{
+            color: #DDD;
+        }
+        a:hover{
+            color: #004071;
+        }
+    }
+    .panel-collapse{
+        /* border: 1px solid #c1c1c1;*/
+        padding-top: 0px;
+    }
+    .panel-body{
+        background-color: #fff;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 10px 10px 15px gray;
+        padding: 10px;
+        margin: -10px;
+        margin-top: 0px;
+    } 
+}
+
+.card-concorsi-bando-allegato{
+    background-color: #F0F0F0;
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px;
+    margin-top: 5px;
+}
+.card-concorsi-bando-allegato:before {
+    content: url("/++resource++ico-concorsi.png");
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+

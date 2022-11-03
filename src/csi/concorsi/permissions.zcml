@@ -1,0 +1,55 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
+  i18n_domain="plone">
+
+  <configure zcml:condition="installed AccessControl.security">
+  <!-- -*- extra stuff goes here -*- -->
+
+    <permission
+        id="csi.concorsi.AddAdesione"
+        title="csi.concorsi: Add Adesione"
+    />
+
+
+    <permission
+        id="csi.concorsi.AddScuola"
+        title="csi.concorsi: Add Scuola"
+    />
+
+
+    <permission
+        id="csi.concorsi.AddCorso"
+        title="csi.concorsi: Add Corso"
+    />
+
+
+    <permission
+        id="csi.concorsi.AddNota"
+        title="csi.concorsi: Add Nota"
+    />
+
+
+    <permission
+        id="csi.concorsi.AddConcorsoAssRicerca"
+        title="csi.concorsi: Add ConcorsoAssRicerca"
+    />
+
+
+    <permission
+        id="csi.concorsi.AddConcorsoRicercatore"
+        title="csi.concorsi: Add ConcorsoRicercatore"
+    />
+
+
+    <permission
+        id="csi.concorsi.AddConcorso"
+        title="csi.concorsi: Add Concorso"
+    />
+
+
+
+
+  </configure>
+
+</configure>

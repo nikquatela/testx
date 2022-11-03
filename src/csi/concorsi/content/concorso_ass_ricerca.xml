@@ -1,0 +1,177 @@
+<model xmlns:i18n="http://xml.zope.org/namespaces/i18n" 
+       xmlns:marshal="http://namespaces.plone.org/supermodel/marshal" 
+       xmlns:form="http://namespaces.plone.org/supermodel/form" 
+       xmlns:security="http://namespaces.plone.org/supermodel/security" 
+       xmlns:users="http://namespaces.plone.org/supermodel/users" 
+       xmlns:lingua="http://namespaces.plone.org/supermodel/lingua" 
+       xmlns="http://namespaces.plone.org/supermodel/schema">
+  <schema>
+    
+    <field name="titolo_assegno" type="zope.schema.Text">
+      <description>Esempio: 'Sviluppo di sensori di tracce gassose...'</description>
+      <required>True</required>
+      <title>Titolo dell'assegno di ricerca</title>
+    </field>
+    <field name="id" type="zope.schema.TextLine">
+      <description>Es: 2021.PR.03.149</description>
+      <required>True</required>
+      <title>Nome associato al bando, questo nome verra' inserito nell'url</title>
+    </field>
+    <field name="description" type="zope.schema.Text">
+      <description>Esempio: 'Sono indette le procedure selettive pubbliche, per titoli e colloquio, per il conferimento di n. 108 assegni per la collaborazione ad attivita\' di ricerca...'</description>
+      <required>False</required>
+      <title>Descrizione del Bando</title>
+    </field>
+    <field name="rapporto" type="zope.schema.Choice">
+      <description></description>
+      <required>True</required>
+      <title>Rapporto di lavoro</title>
+      <values>
+        <element>Assegnista di ricerca</element>
+      </values>
+    </field>
+    <field name="nr_posti" type="zope.schema.Int">
+      <description>Il numero dei posti disponibili</description>
+      <required>False</required>
+      <title>Nr. posti</title>
+    </field>
+    <field name="settoreDisciplinare" type="zope.schema.TextLine">
+      <description></description>
+      <required>False</required>
+      <title>Settori scientifico disciplinare</title>
+    </field>
+    <field name="url_pica" type="zope.schema.TextLine">
+      <description>Inserire l'indirizzo URL PICA, es: https://pica.cineca.it/uniba/xxpta-xxx</description>
+      <required>False</required>
+      <title>Indirizzo URL PICA</title>
+    </field>
+    <field name="area_scientifico_disciplinare" type="zope.schema.TextLine">
+      <description></description>
+      <required>True</required>
+      <title>Area scientifico-disciplinare</title>
+    </field>
+    <field name="durata_mesi" type="zope.schema.Int">
+      <description>Specificare la durata del contratto in mesi: Es: 14</description>
+      <required>True</required>
+      <title>Durata in mesi</title>
+    </field>
+    <field name="programma_ricerca" type="zope.schema.TextLine">
+      <description></description>
+      <required>True</required>
+      <title>Programma ricerca</title>
+    </field>
+    <field name="requisiti" type="zope.schema.TextLine">
+      <description></description>
+      <required>False</required>
+      <title>Requisiti</title>
+    </field>
+    <field name="colloquio" type="plone.app.textfield.RichText">
+      <description>Inserire il testo del colloquio come da bando</description>
+      <required>False</required>
+      <title>Colloquio</title>
+    </field>
+    <field name="lingua" type="zope.schema.TextLine">
+      <description>Inserire una o piu' lingue richieste, es: inglese, tedesco</description>
+      <required>False</required>
+      <title>Lingua</title>
+    </field>
+    <field name="importo_assegno" type="zope.schema.TextLine">
+      <description>Inserire l'importo annuale dell'assegno di ricerca, es: 1349,02</description>
+      <required>False</required>
+      <title>Importo assegno annuale</title>
+    </field>
+    <field name="sede" type="zope.schema.List">
+      <description i18n:translate="">La sede dove verra' impiegato il vincitore, inserire una sede per ogni rigo</description>
+      <title i18n:translate="">Sede</title>
+	    <required>False</required>
+      <value_type type="zope.schema.TextLine"/>
+    </field>
+	
+
+
+    <fieldset name="dati_bando" label="Dati bando">
+      <field name="dr_bando" type="zope.schema.TextLine">
+        <description>Nome del Bando</description>
+        <title>Decreto Bando</title>
+      </field>
+      <field name="data_bando" type="zope.schema.Datetime">
+        <description>Data di pubblicazione del bando</description>
+        <title>Bando del</title>
+      </field>
+      <field name="scadenza_termini" type="zope.schema.Datetime">
+        <description>Data di scadenza dei termini per la pubblicazione delle domande</description>
+        <title>Scadenza termini</title>
+      </field>
+      <field name="_allegatobando" type="plone.namedfile.field.NamedBlobFile">
+        <description>File in formato pdf</description>
+        <title>Allegato Bando</title>
+      </field>
+    </fieldset>
+
+
+    <fieldset name="dati_bando_riapertura" label="Dati bando riapertura">
+      <field name="dr_modif_riap" type="zope.schema.TextLine">
+        <description>Nome del Bando Modif./Riap</description>
+        <required>False</required>
+        <title>Decreto Modif. e/o Riap. termini</title>
+      </field>
+      <field name="data_bando_MR" type="zope.schema.Datetime">
+        <description>Data di pubblicazione del bando Modif./Riap.</description>
+        <required>False</required>
+        <title>Bando del</title>
+      </field>
+      <field name="_allegato_DR_modif" type="plone.namedfile.field.NamedBlobFile">
+        <description/>
+        <required>False</required>
+        <title>Allegato Decreto Modifica/Riapertura termini</title>
+      </field>
+      <field name="data_GU_MR" type="zope.schema.Datetime">
+        <description>data di pubblicazione della riapertura del bando</description>
+        <required>False</required>
+        <title>Data Pubblicazione Modif./Riap.</title>
+      </field>
+      <field name="scadenza_termini_MR" type="zope.schema.Datetime">
+        <description>Data di scadenza dei termini per la pubblicazione delle domande</description>
+        <required>False</required>
+        <title>Scadenza termini Modif./Riap.</title>
+      </field>
+    </fieldset>
+
+
+    <fieldset name="commissione" label="Commissione">
+      <field name="_allegato_DR_commissione" type="plone.namedfile.field.NamedBlobFile">
+        <description/>
+        <required>False</required>
+        <title>Allegato Decreto Commissione</title>
+      </field>
+      <field name="allegato_valutazionetitoli" type="plone.namedfile.field.NamedBlobFile">
+        <description/>
+        <required>False</required>
+        <title>Valutazione Titoli</title>
+      </field>
+      <field name="allegato_valutazionecolloquio" type="plone.namedfile.field.NamedBlobFile">
+        <description/>
+        <required>False</required>
+        <title>Valutazione Colloquio</title>
+      </field>
+    </fieldset>
+
+    <fieldset name="approvazione_atti" label="Approvazione atti">
+      <field name="_allegato_DR_atti" type="plone.namedfile.field.NamedBlobFile">
+        <description/>
+        <required>False</required>
+        <title>Allegato Decreto Atti</title>
+      </field>
+    </fieldset>
+    
+    
+    <fieldset name="note" label="Note">
+      <field name="note" type="plone.app.textfield.RichText">
+        <description>Note e commenti</description>
+        <required>False</required>
+        <title>Note</title>
+      </field>
+    </fieldset>
+
+  </schema>
+</model>

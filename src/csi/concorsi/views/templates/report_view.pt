@@ -1,0 +1,115 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="csi.concorsi"
+      metal:use-macro="context/main_template/macros/master">
+
+<body>
+
+<metal:content-core fill-slot="content-core">
+<metal:block define-macro="content-core">
+
+  <!-- Lista Concorsi -->
+  <metal:listingmacro define-macro="listing">
+  <tal:results define="batch view/batch">
+    <tal:listing condition="batch">
+
+      <div metal:use-macro="context/batch_macros/macros/navigation" />
+
+      <div class="table-responsive has-table">
+        <table
+            class="listing table-striped Table Table--withBorder js-TableResponsive tablesaw tablesaw-swipe"
+	        data-tablesaw-mode="swipe"
+            summary="Content listing"
+            i18n:attributes="summary summary_content_listing;">
+          <tbody tal:define="portal context/@@plone_portal_state/portal;
+                             image_scale portal/@@image_scale">
+            <tal:entries tal:repeat="item batch">
+              <tal:block tal:define="item_url item/getURL;
+                                     item_id item/getId;
+                                     item_title item/Title;
+                                     item_title_or_id python:item_title or item_id;
+                                     item_description item/Description;
+                                     item_wf_state item/review_state;
+                                     itemObj item/getObject;
+                                     ">
+                <tr metal:define-macro="listitem"
+                    tal:define="oddrow repeat/item/odd;
+                                tipoBando item/Type;
+                                titoloBando python: 'Bando '+item_title if tipoBando!='Concorso Assegno di Ricerca' else item_title
+                                "
+                    tal:attributes="class python: oddrow and 'even' or 'odd';">
+                      <td class="report-concorsi">
+                        <div class="row">
+                            <div class="col-1 col-xl-1 col-lg-2 col-md-2 col-sm-12">
+                              <a data-toggle="tooltip" class="pat-tooltip"
+                              tal:attributes="href item_url;"
+                              tal:content="titoloBando">
+                              </a>
+                              <div tal:condition="python:itemObj._allegatobando" tal:on-error="nothing">
+                                <br/>
+                                <a data-toggle="tooltip" class="card-concorsi-bando-allegato pat-tooltip"
+                                tal:define="download_url python:view.getURL('_allegatobando', itemObj);"
+                                tal:attributes="href string:${itemObj/absolute_url}/${download_url};" >
+                                <span class="discreet" style="font-size: 12px;">download &nbsp;&nbsp;</span>
+                                </a>
+                              </div>
+                            </div>
+                            <div class="col-11 col-xl-11 col-lg-10 col-md-10 col-sm-12 report-concorsi-body"
+                              tal:attributes="onclick string:location.href='${item_url}'; title titoloBando;">
+                                <span tal:content="item_description"/>
+                                <p>
+                                  <span i18n:translate="" class="discreet">Decreto n.</span>
+                                  <span tal:content="itemObj/dr_bando"></span>
+                                  <span i18n:translate="box_bando_del_giorno" class="discreet">del giorno </span>
+                                  <span class ="campi"
+                                        tal:content="python:itemObj.data_bando and itemObj.data_bando.strftime('%d/%m/%Y') ">01/01/2000</span>
+                                  <span tal:condition="itemObj/pubbl_GU|nothing">
+                                      <span i18n:translate="box_bando_gu" class="discreet">pubblicato sulla Gazzetta Ufficiale </span> n.
+                                      <span tal:content="itemObj/pubbl_GU"></span>
+                                      <span i18n:translate="box_bando_del_giorno" class="discreet">del giorno </span>
+                                      <span class ="campi"
+                                            tal:content="python:itemObj.data_GU and itemObj.data_GU.strftime('%d/%m/%Y')">01/01/2000</span>
+                                  </span>
+                                  <br/>
+                                  <span tal:condition="itemObj/DR_appr_atti|nothing">
+                                      <span i18n:translate="" class="discreet">Decreto di Pubblicazione Atti n.</span>
+                                      <span tal:content="itemObj/DR_appr_atti">00</span>
+                                      <span i18n:translate="box_bando_del_giorno" class="discreet">del giorno </span>
+                                      <span class ="campi"
+                                        tal:content="python:itemObj.data_DR_appr_atti and itemObj.data_DR_appr_atti.strftime('%d/%m/%Y') ">01/01/2000
+                                      </span>
+                                  </span>
+                                </p>
+                            </div>
+                        </div>
+                      </td>
+                </tr>
+              </tal:block>
+            </tal:entries>
+          </tbody>
+        </table>
+      </div>
+
+      <div metal:use-macro="context/batch_macros/macros/navigation" />
+
+    </tal:listing>
+
+    <metal:empty metal:define-slot="no_items_in_listing">
+      <p class="discreet"
+        tal:condition="not: batch"
+	      i18n:translate="">
+        La ricerca non ha prodotto risultati.
+      </p>
+    </metal:empty>
+
+  </tal:results>
+  </metal:listingmacro>
+
+</metal:block>
+
+</metal:content-core>
+
+</body>
+</html>
